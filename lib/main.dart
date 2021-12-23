@@ -8,9 +8,50 @@ void main() {
     title: "Series de natal",
 
     ///home: Container(color: Colors.white,),
-    home: Home(),
+    home: HomeStateful(),
   ));
 }
+
+class HomeStateful extends StatefulWidget {
+  const HomeStateful({Key? key}) : super(key: key);
+
+  @override
+  _HomeStatefulState createState() => _HomeStatefulState();
+}
+
+class _HomeStatefulState extends State<HomeStateful> {
+  var _texto = "Julli Mayanne";
+  @override
+  Widget build(BuildContext context) {
+    print("bild chamado");
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Clique 1"),
+        backgroundColor: Colors.blue,
+      ),
+      body: Container(
+        child: Column(
+          children: [
+            RaisedButton(
+              onPressed: () {
+                setState(() {
+                  _texto = "TROCOU";
+                });
+              },
+              color: Colors.yellow,
+              child: Text("Clique Aqui"),
+            ),
+            Text("$_texto")
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
+
+/*
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -37,3 +78,4 @@ class Home extends StatelessWidget {
     );
   }
 }
+*/
