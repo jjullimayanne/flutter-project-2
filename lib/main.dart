@@ -24,8 +24,9 @@ class _HomeState extends State<Home> {
         title: Text("Episódios de natal"),
         backgroundColor: Colors.red.shade900,
       ),
-      body: Container(
-        width: double.infinity,
+      body:Center(
+        child:  Container(
+       // width: double.infinity,
         padding: EdgeInsets.all(16),
         decoration:
             BoxDecoration(border: Border.all(width: 3, color: Colors.black)),
@@ -57,6 +58,7 @@ class _HomeState extends State<Home> {
           ],
         ),
       ),
+      )
     );
   }
 }
